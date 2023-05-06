@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fesh Transportation Management</title>
+        <meta content="HTML,CSS,XML,XHTML,Javascript" name="keywords"/>
+	<meta content="Transportation Management System" name="description"/> 
+	<meta charset="UTF-8"/>
+	<meta content="Ogbu Paschal" name="author"/>
+    <meta content="width=devive-width,intial-scale=1" name="viewport"/>
+     </head>
+ 
+     
+     </html>
+     <script>
+     fetch("https://nbtms.pythonanywhere.com/api/ship/all_shipments/",{
+                method:'GET',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-type' : 'application/json',
+                    'Authorization': 'Token 984ea2c4b8ae9be5e2381ac543ea0e72348ba5e5'
+    
+                }
+            })
+            .then((res) => res.json())
+            
+
+            
+.then((data) => console.log(data))   
+
+sessionStorage.getItem ('token' );
+
+
+     </script>

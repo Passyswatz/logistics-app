@@ -1,0 +1,47 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title>Fesh Transportation Management</title>
+        <meta content="HTML,CSS,XML,XHTML,Javascript" name="keywords"/>
+	<meta content="Transportation Management System" name="description"/> 
+	<meta charset="UTF-8"/>
+	<meta content="Ogbu Paschal" name="author"/>
+    <meta content="width=devive-width,intial-scale=1" name="viewport"/>
+    <link rel="stylesheet" href="fesh.css">
+    <script src="og.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+    <nav class="navbar">
+        <logo> Og Transport Management System </logo>
+             <ul>
+                <li><a href="Fesh.html">Og TMS</a></li>
+                <li><a href="shipment.html">Shipments</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+    </nav>
+
+    <br><br><br>
+    
+        <div class="mat">
+    <form action="https://nbtms.pythonanywhere.com/api/customer/password_reset/" method="POST">
+        <label>Username</label>
+<input type="string" placeholder="Username" name="username" max_length="150" id="name" read_only="false" help_text="Required. 150 characters or fewer.letters,digits and @/*/+/-/_ only." required>
+<br><br>
+<label>otp</label>
+<input type="string" placeholder="otp" name="otp" id="name">
+<br><br>
+<label>password</label>
+<input type="string" placeholder="password" name="password" id="name" required>
+<br><br>
+<label>password2</label>
+<input type="string" placeholder="password2" name="password2" id="name" required>  
+<br><br>
+<input type="submit" value="submit" name="submit">
+    </form>
+    </div>
+    
+
+</body>
+</html>

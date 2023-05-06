@@ -1,0 +1,98 @@
+    <!DOCTYPE html>
+<html lang="US-en">
+    <head>
+        <title>Log in | Transportation System Management</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta charset="UTF-8"/>
+        <meta content="HTML,CSS,Javascript" name="keywords"/>
+        
+        <link rel="stylesheet" href="fesh.css">
+       
+    </head>
+    <body>
+        <body>
+            <div class="wrapper">
+            <nav class="navbar">
+                <logo> Og Transport Management System </logo>
+                     <ul>
+                        <li><a href="Fesh.html">Og TMS</a></li>
+                        
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+            </nav>
+           
+    <div class="main">
+        <div class="register">
+    
+            <h2>Register Here</h2>
+    <form class="form" id="loginPage">
+        <label>username</label>
+        <input type="text" placeholder="username" name="username" id="username"  help_text="Required. 150 characters or fewer.letters,digits and @/*/+/-/_ only." required>
+        <br><br>
+        <label>password</label>
+        <input type="text" placeholder="password" name="password" id="password" required>
+        <br><br>
+
+       
+         <input  type="submit" value="submit" name="submit">
+
+    <div id="demo"></div>
+    </form>
+
+    
+    </body>
+</html>
+
+<script>
+
+
+document.getElementById("loginPage").addEventListener('submit', loginPage);
+            
+            function loginPage(e){
+                e.preventDefault();
+                let username = document.getElementById('username').value;   
+                
+                let password = document.getElementById('password').value;
+            
+            fetch("https://nbtms.pythonanywhere.com/api/staff/login/",{
+                method:'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-type' : 'application/json',
+                    
+                },
+                body:JSON.stringify({username:username,password:password})
+                
+             } )
+
+.then((respond) => respond.json())
+ 
+ .then((data) => {
+
+    sessionStorage.setItem ('token' , data.token);
+    sessionStorage.setItem ("username", data.user);
+    sessionStorage.setItem ("email", data.email);
+    sessionStorage.setItem ("phone", data.phone);
+    sessionStorage.setItem ("user_id", data.user_id);
+
+    if (username == "passyswatz" && password =="Pius?eze?10"){
+        alert('login successful')
+        window.location = "admin.html";
+        return false;
+        console.log('login')
+    
+}
+       
+        
+     else {
+        document.getElementById("demo").innerHTML = 'wrong crendentials';
+        
+    
+ console.log(data);
+ }
+
+} )}
+
+
+</script>

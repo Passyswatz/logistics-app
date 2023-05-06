@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fesh Transportation Management</title>
+        <meta content="HTML,CSS,XML,XHTML,Javascript" name="keywords"/>
+	<meta content="Transportation Management System" name="description"/> 
+	<meta charset="UTF-8"/>
+	<meta content="Ogbu Paschal" name="author"/>
+    <meta content="width=devive-width,intial-scale=1" name="viewport"/>
+    <link rel="stylesheet" href="fesh.css">
+    
+    
+</head>
+<body>
+    <div class="wrapper">
+    <nav class="navbar">
+        <logo> Og Transport Management System </logo>
+             <ul>
+                <li><a href="Fesh.html">Og TMS</a></li>
+                <li><a href="#">Contact Us</a></li>
+                 <li><a href="#">About</a></li>
+            </ul>
+    </nav>
+
+    <br>
+   
+    <br>
+
+    
+
+<br><br><br><br><br>
+<div>
+    <div id="max" style="background-color: whitesmoke;text-align: center; color: black;font-size: 50px;display: flex;"> welcome </div>
+</div><br><br><br><br>
+
+<div style="display: grid;">
+<nat  class="natbar">
+    <ul>
+        <li><a href="create.html">Create shipment</a></li>
+        <li><a href="driver.html">Add a driver</a></li>
+        <li><a href="sender.html">Add sender information</a></li>
+        <li><a href="shipment.html">Add shiping items</a></li>
+        <li><a href="change.html">change shipment status</a></li>
+       
+        <li><a href="view.html">View shipment invoice</a></li>
+        <li><a href="update.html">Update or Delete shipments</a></li>
+    </ul>
+
+</nat>
+</div>
+
+
+ 
+
+    
+</body>
+
+<script>
+
+   
+
+    sessionStorage.getItem ('token' );
+    sessionStorage.getItem ("username");
+    sessionStorage.getItem ("email");
+    sessionStorage.getItem ("phone" );
+    sessionStorage.getItem ("user_id");
+    
+    document.getElementById('max').innerHTML =  'welcome    ' + sessionStorage.getItem ("username");
+   
+</script>
+</html>
